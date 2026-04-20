@@ -1,0 +1,25 @@
+name: Docs
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - 'docs/**'
+            - '.github/workflows/docs.yml'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: retypeapp/action-build@v3
+              with:
+                  config: docs
+
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: retype-site
+                  path: .retype
+                  retention-days: 7

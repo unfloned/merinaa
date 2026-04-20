@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: transparent;
+        --foreground: 0 0% 100%;
+    }
+
+    /* Ensure html and body are transparent for NUI */
+    html,
+    body,
+    #root {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-black/70 border border-white/10;
+    }
+
+    .glass-dark {
+        @apply bg-black/85 border border-white/5;
+    }
+
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Midnight Blue custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(22, 35, 56, 0.5);
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.4);
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.6);
+}
+
+/* Disable text selection */
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Disable focus outlines for game UI elements */
+/* This prevents the "stuck focus" problem in NUI */
+button:focus,
+div:focus,
+span:focus,
+[role="button"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Also prevent focus ring on click */
+button:focus-visible,
+div:focus-visible,
+[role="button"]:focus-visible {
+    outline: none !important;
+}
+
+/* Reset any default focus styles */
+*:focus {
+    outline: none;
+}
+
+/* Slide-In Animation for Admin Panel */
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in-right 0.2s ease-out forwards;
+}

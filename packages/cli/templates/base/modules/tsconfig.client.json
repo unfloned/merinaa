@@ -1,0 +1,27 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": ".",
+        "baseUrl": "..",
+        "lib": ["ES2022"],
+        "paths": {
+            "@modules/*": ["./modules/*"]
+        },
+        "skipLibCheck": true,
+        "noEmitOnError": false,
+        "types": ["@citizenfx/client"]
+    },
+    "include": [
+        "./global.d.ts",
+        "./.merinaa/client.ts",
+        "./*/client/**/*.ts",
+        "./*/shared/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "./*/server/**",
+        "./*/ui/**"
+    ]
+}

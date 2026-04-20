@@ -1,0 +1,53 @@
+{
+    "name": "@merinaa/core",
+    "version": "0.3.0",
+    "description": "Core types, decorators and interfaces for the Merinaa FiveM framework",
+    "author": "Florian Chiorean",
+    "license": "MIT",
+    "homepage": "https://merinaa.dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/unfloned/merinaa.git",
+        "directory": "packages/core"
+    },
+    "bugs": "https://github.com/unfloned/merinaa/issues",
+    "keywords": [
+        "fivem",
+        "framework",
+        "typescript",
+        "decorators",
+        "dependency-injection",
+        "di",
+        "merinaa"
+    ],
+    "sideEffects": false,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tspc",
+        "dev": "tspc --watch",
+        "typecheck": "tspc --noEmit"
+    },
+    "peerDependencies": {
+        "reflect-metadata": "^0.2.0"
+    },
+    "devDependencies": {
+        "reflect-metadata": "^0.2.2",
+        "typescript": "^5.7.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

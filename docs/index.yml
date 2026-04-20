@@ -1,0 +1,9 @@
+order:
+    - index.md
+    - getting-started.md
+    - architecture.md
+    - modules
+    - security.md
+    - plugins.md
+    - cli.md
+    - changelog.md

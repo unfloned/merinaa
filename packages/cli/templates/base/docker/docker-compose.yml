@@ -1,0 +1,99 @@
+# =============================================================================
+# Docker Compose — Development Stack
+# =============================================================================
+#
+# Brings up MySQL + FiveM + optional Adminer so you can `docker compose up -d`
+# and have a working server straight after `pnpm run build`.
+#
+# Uses ../.env for secrets. Copy .env.example → .env and fill in passwords.
+#
+# Build your resource first (outside Docker — avoids Deepkit reflection
+# weirdness in Linux containers on Windows hosts):
+#   pnpm run build
+#
+# Then start the stack:
+#   docker compose up -d
+#
+# The FiveM container mounts ../resource/ as the resource, so rebuilding +
+# `ensure {{PROJECT_NAME}}` (or docker compose restart fivem) picks up changes.
+# =============================================================================
+
+services:
+    # ---------------------------------------------------------------------
+    # MySQL 8 — schema is created on first boot from MYSQL_DATABASE.
+    # Deepkit ORM migrations handle table creation on server start.
+    # No init.sql needed.
+    # ---------------------------------------------------------------------
+    mysql:
+        image: mysql:8.0
+        container_name: {{PROJECT_NAME}}-mysql
+        env_file: ../.env
+        # mysql_native_password for compatibility with the mariadb connector
+        # Deepkit uses.
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+            MYSQL_DATABASE: ${MYSQL_DATABASE:-{{PROJECT_NAME}}}
+            MYSQL_USER: ${MYSQL_USER:-fivem}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD:-fivem123}
+        ports:
+            # 3307 on host → 3306 in container (sidesteps local MySQL conflicts)
+            - '${MYSQL_HOST_PORT:-3307}:3306'
+        volumes:
+            - mysql_data:/var/lib/mysql
+        healthcheck:
+            test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-proot']
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        networks:
+            - fivem-network
+
+    # ---------------------------------------------------------------------
+    # FiveM server. Mounts the built resource/ from the project root.
+    # ---------------------------------------------------------------------
+    fivem:
+        image: spritsail/fivem:latest
+        container_name: {{PROJECT_NAME}}-server
+        env_file: ../.env
+        depends_on:
+            mysql:
+                condition: service_healthy
+        ports:
+            - '30120:30120'       # Game port TCP
+            - '30120:30120/udp'   # Game port UDP
+            - '40120:40120'       # txAdmin
+        environment:
+            SERVER_PROFILE: dev
+            TXADMIN_PORT: 40120
+        volumes:
+            - ./fivem/server-data:/config
+            # Your built resource — rebuild with `pnpm run build`
+            - ../resource:/config/resources/[framework]/{{PROJECT_NAME}}
+            - ./fivem/server.cfg:/config/server.cfg:ro
+        networks:
+            - fivem-network
+        tty: true
+        stdin_open: true
+
+    # ---------------------------------------------------------------------
+    # Adminer — web UI for MySQL inspection at http://localhost:8080
+    # ---------------------------------------------------------------------
+    adminer:
+        image: adminer:latest
+        container_name: {{PROJECT_NAME}}-adminer
+        ports:
+            - '8080:8080'
+        environment:
+            ADMINER_DEFAULT_SERVER: mysql
+        depends_on:
+            - mysql
+        networks:
+            - fivem-network
+
+volumes:
+    mysql_data:
+
+networks:
+    fivem-network:
+        driver: bridge

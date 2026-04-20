@@ -1,0 +1,50 @@
+# =============================================================================
+# Framework Configuration
+# =============================================================================
+#
+# Values can reference environment variables: ${VAR_NAME}
+# Missing vars become `undefined` (whole-string placeholder) so module defaults
+# apply, or empty string (when embedded in a longer string).
+#
+# Precedence (later wins):
+#   1. Framework internal defaults (from FiveM Convars)
+#   2. Module defaults (@Module({ config: {...} }))
+#   3. THIS FILE
+#   4. Convars from server.cfg / ENV
+# =============================================================================
+
+framework:
+    debug: false
+    locale: de
+
+logging:
+    level: info
+    forwardToDiscord: false
+
+# General Discord alerts (server start/stop, unhandled exceptions)
+discord:
+    webhook: ${DISCORD_FRAMEWORK_WEBHOOK}
+    username: Framework
+
+# Live test reports in Discord (vitest DiscordReporter)
+testing:
+    discord:
+        enabled: false
+        webhook: ${DISCORD_TESTING_WEBHOOK}
+        mentionOnFail: ${DISCORD_TESTING_MENTION}
+        throttleMs: 1500
+    skipIntegration: false
+
+# -----------------------------------------------------------------------------
+# Module-scoped overrides
+# -----------------------------------------------------------------------------
+# Keys match the module's configNamespace (lowercased class name with "Module"
+# suffix stripped). Values override the defaults declared in @Module({ config }).
+#
+# Example:
+#   hello:
+#       maxGreetingsPerPlayer: 20
+# -----------------------------------------------------------------------------
+
+hello:
+    maxGreetingsPerPlayer: 10

@@ -1,0 +1,20 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Internal working notes — never committed
+.claude/
+
+# Local packed tarballs (consumers pull them in via file: for dev)
+.tarballs/
+*.tgz
+
+# UI build output (generated from packages/ui)
+resource/

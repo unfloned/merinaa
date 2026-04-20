@@ -1,0 +1,99 @@
+{
+    "name": "@merinaa/server",
+    "version": "0.3.0",
+    "description": "Server-side framework with DI, Deepkit ORM, events, RPC and YAML config for FiveM",
+    "author": "Florian Chiorean",
+    "license": "MIT",
+    "homepage": "https://merinaa.dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/unfloned/merinaa.git",
+        "directory": "packages/server"
+    },
+    "bugs": "https://github.com/unfloned/merinaa/issues",
+    "keywords": [
+        "fivem",
+        "server",
+        "framework",
+        "typescript",
+        "dependency-injection",
+        "orm",
+        "deepkit",
+        "mysql",
+        "rpc",
+        "events",
+        "merinaa"
+    ],
+    "sideEffects": [
+        "dist/index.js"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./testing": {
+            "types": "./dist/testing/index.d.ts",
+            "default": "./dist/testing/index.js"
+        },
+        "./testing/reporters": {
+            "types": "./dist/testing/reporters/index.d.ts",
+            "default": "./dist/testing/reporters/index.js"
+        },
+        "./testing/setup": {
+            "types": "./dist/testing/setup.d.ts",
+            "default": "./dist/testing/setup.js"
+        },
+        "./config": {
+            "types": "./dist/config/index.d.ts",
+            "default": "./dist/config/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tspc",
+        "dev": "tspc --watch",
+        "typecheck": "tspc --noEmit",
+        "db:migrate": "ts-node src/database/cli/migrate.ts",
+        "db:migrate:create": "ts-node src/database/cli/create-migration.ts"
+    },
+    "dependencies": {
+        "@merinaa/core": "workspace:*",
+        "@deepkit/type": "^1.0.19",
+        "@deepkit/orm": "^1.0.19",
+        "@deepkit/sql": "^1.0.19",
+        "@deepkit/mysql": "^1.0.19",
+        "@deepkit/postgres": "^1.0.19",
+        "@deepkit/injector": "^1.0.19",
+        "yaml": "^2.6.0"
+    },
+    "peerDependencies": {
+        "@citizenfx/server": "*",
+        "reflect-metadata": "^0.2.0"
+    },
+    "peerDependenciesMeta": {
+        "@citizenfx/server": {
+            "optional": false
+        },
+        "reflect-metadata": {
+            "optional": false
+        }
+    },
+    "devDependencies": {
+        "@citizenfx/server": "latest",
+        "@types/node": "^22.0.0",
+        "reflect-metadata": "^0.2.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "buildCommand": "npx retype build docs -o .vercel/output/static",
+    "outputDirectory": ".vercel/output/static",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "installCommand": "npm i -g retypeapp"
+}

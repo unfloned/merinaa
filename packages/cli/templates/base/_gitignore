@@ -1,0 +1,26 @@
+node_modules/
+dist/
+
+# Build artifacts (checked in via release, ignored in dev)
+resource/server/
+resource/client/
+resource/ui/
+resource/framework.config.yaml
+resource/version.json
+# fxmanifest.lua and resource/ itself are NOT ignored — they ARE your resource.
+
+# Merinaa pre-build generator output (regenerated on every build)
+modules/.merinaa/
+scripts/.merinaa-core-stub.js
+
+# TypeScript
+*.tsbuildinfo
+modules/**/*.js
+modules/**/*.js.map
+modules/**/*.d.ts
+modules/**/*.d.ts.map
+
+*.log
+.env
+.DS_Store
+Thumbs.db

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "lib": ["ES2022"],
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strictPropertyInitialization": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "paths": {
+            "@merinaa/core": ["./packages/core/dist/index.d.ts"],
+            "@merinaa/server": ["./packages/server/dist/index.d.ts"],
+            "@merinaa/client": ["./packages/client/dist/index.d.ts"],
+            "@merinaa/ui": ["./packages/ui/src/core/index.ts"]
+        }
+    },
+    "reflection": true,
+    "exclude": ["node_modules", "dist", "build"]
+}

@@ -1,0 +1,29 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": ".",
+        "baseUrl": "..",
+        "paths": {
+            "@modules/*": ["./modules/*"]
+        },
+        "skipLibCheck": true,
+        "noEmitOnError": false,
+        "types": ["node", "@citizenfx/server"]
+    },
+    "include": [
+        "./.merinaa/server.ts",
+        "./config.ts",
+        "./global.d.ts",
+        "./merinaa.config.ts",
+        "./*/module.config.ts",
+        "./*/server/**/*.ts",
+        "./*/shared/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "./**/client/**",
+        "./**/ui/**"
+    ]
+}

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fullscreen transparent overlay — individual pages control their own layout. */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: white;
+    font-family: system-ui, sans-serif;
+    overflow: hidden;
+}

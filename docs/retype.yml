@@ -1,0 +1,31 @@
+name: Merinaa
+title: Merinaa — a modular TypeScript framework for FiveM
+
+url: https://merinaa.dev
+
+edit:
+    repo: https://github.com/unfloned/merinaa
+    branch: main
+    base: /docs
+
+meta:
+    title: '{{ page.title }} · Merinaa'
+
+search:
+    enabled: true
+
+footer:
+    copyright: '© {{ now.year }} · Florian Chiorean'
+
+links:
+    - text: GitHub
+      link: https://github.com/unfloned/merinaa
+      icon: mark-github
+    - text: Discord
+      link: https://discord.gg/pbXw4acstw
+      icon: comment-discussion
+    - text: npm
+      link: https://www.npmjs.com/org/merinaa
+      icon: package
+
+favicon: favicon.ico
