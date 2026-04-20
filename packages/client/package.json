@@ -4,7 +4,7 @@
     "description": "Client-side framework for FiveM with decorator-based controllers and NUI bridge",
     "author": "Florian Chiorean",
     "license": "MIT",
-    "homepage": "https://merinaa.dev",
+    "homepage": "https://merinaa.vercel.app",
     "repository": {
         "type": "git",
         "url": "https://github.com/unfloned/merinaa.git",

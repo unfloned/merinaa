@@ -4,7 +4,7 @@
     "description": "CLI scaffolding for Merinaa — init new FiveM projects and generate modules",
     "author": "Florian Chiorean",
     "license": "MIT",
-    "homepage": "https://merinaa.dev",
+    "homepage": "https://merinaa.vercel.app",
     "repository": {
         "type": "git",
         "url": "https://github.com/unfloned/merinaa.git",

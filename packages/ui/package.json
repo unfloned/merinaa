@@ -4,7 +4,7 @@
     "description": "React-based NUI framework for FiveM — page/overlay registry, NUI hooks, reusable components",
     "author": "Florian Chiorean",
     "license": "MIT",
-    "homepage": "https://merinaa.dev",
+    "homepage": "https://merinaa.vercel.app",
     "repository": {
         "type": "git",
         "url": "https://github.com/unfloned/merinaa.git",

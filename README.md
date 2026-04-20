@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@merinaa/core.svg?label=%40merinaa%2Fcore&color=0ea5e9)](https://www.npmjs.com/package/@merinaa/core)
 [![license](https://img.shields.io/github/license/unfloned/merinaa.svg?color=green)](./LICENSE)
 [![tests](https://img.shields.io/badge/tests-79%20passing-brightgreen)](./packages/server/src)
-[![docs](https://img.shields.io/badge/docs-merinaa.dev-0ea5e9)](https://merinaa.dev)
+[![docs](https://img.shields.io/badge/docs-merinaa.vercel.app-0ea5e9)](https://merinaa.vercel.app)
 [![discord](https://img.shields.io/badge/discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/pbXw4acstw)
 
 > A full-TypeScript framework for FiveM servers. DI, decorators, ORM, lazy React NUI — scaffolded with one command.
@@ -17,7 +17,7 @@ pnpm install
 pnpm run docker:up
 ```
 
-Connect with FiveM at `localhost:30120`. Full walkthrough in the [**Getting Started**](https://merinaa.dev/getting-started/) guide.
+Connect with FiveM at `localhost:30120`. Full walkthrough in the [**Getting Started**](https://merinaa.vercel.app/getting-started/) guide.
 
 ## Features
 
@@ -48,7 +48,7 @@ Connect with FiveM at `localhost:30120`. Full walkthrough in the [**Getting Star
 
 ## Community
 
-- **Docs:** [merinaa.dev](https://merinaa.dev)
+- **Docs:** [merinaa.vercel.app](https://merinaa.vercel.app)
 - **Discord:** [join the server](https://discord.gg/pbXw4acstw)
 - **Issues / Discussions:** [github.com/unfloned/merinaa](https://github.com/unfloned/merinaa/issues)
 

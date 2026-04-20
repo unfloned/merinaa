@@ -4,7 +4,7 @@
     "description": "Core types, decorators and interfaces for the Merinaa FiveM framework",
     "author": "Florian Chiorean",
     "license": "MIT",
-    "homepage": "https://merinaa.dev",
+    "homepage": "https://merinaa.vercel.app",
     "repository": {
         "type": "git",
         "url": "https://github.com/unfloned/merinaa.git",
