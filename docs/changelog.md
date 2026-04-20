@@ -1,6 +1,7 @@
 ---
-title: Changelog
-order: 90
+label: Changelog
+icon: tag
+order: 10
 ---
 
 # Changelog

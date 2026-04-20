@@ -1,6 +1,7 @@
 ---
-title: Pages & overlays
-order: 35
+label: Pages & overlays
+icon: browser
+order: 90
 ---
 
 # Pages & overlays

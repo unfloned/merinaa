@@ -1,6 +1,7 @@
 ---
-title: Security
-order: 50
+label: Security
+icon: shield
+order: 60
 ---
 
 # Security

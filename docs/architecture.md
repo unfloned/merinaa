@@ -1,6 +1,7 @@
 ---
-title: Architecture
-order: 20
+label: Architecture
+icon: project
+order: 80
 ---
 
 # Architecture

@@ -1,6 +1,7 @@
 ---
-title: CLI reference
-order: 70
+label: CLI
+icon: terminal
+order: 40
 ---
 
 # CLI reference

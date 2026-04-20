@@ -1,6 +1,7 @@
 ---
-title: Getting started
-order: 10
+label: Getting started
+icon: rocket
+order: 90
 ---
 
 # Getting started

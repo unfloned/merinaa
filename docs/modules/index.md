@@ -1,6 +1,7 @@
 ---
-title: Authoring a module
-order: 30
+label: Modules
+icon: file-code
+order: 70
 ---
 
 # Authoring a module

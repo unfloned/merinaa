@@ -1,6 +1,7 @@
 ---
-title: Plugins & overrides
-order: 60
+label: Plugins & overrides
+icon: plug
+order: 50
 ---
 
 # Plugins & overrides

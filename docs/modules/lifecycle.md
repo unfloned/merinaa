@@ -1,6 +1,7 @@
 ---
-title: Lifecycle hooks
-order: 40
+label: Lifecycle hooks
+icon: sync
+order: 70
 ---
 
 # Lifecycle hooks

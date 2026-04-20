@@ -1,5 +1,7 @@
 ---
-title: Merinaa
+label: Home
+icon: home
+order: 100
 description: A modular TypeScript framework for FiveM servers
 ---
 

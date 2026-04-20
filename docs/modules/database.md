@@ -1,5 +1,6 @@
 ---
-title: Database & migrations
+label: Database
+icon: database
 order: 50
 ---
 
