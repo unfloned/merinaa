@@ -18,7 +18,7 @@ jobs:
               with:
                   config: docs
 
-            - uses: actions/upload-artifact@v4
+            - uses: actions/upload-artifact@v7
               with:
                   name: retype-site
                   path: .retype
