@@ -8,9 +8,6 @@ edit:
     branch: main
     base: /docs
 
-meta:
-    title: '{{ page.title }} · Merinaa'
-
 search:
     enabled: true
 
