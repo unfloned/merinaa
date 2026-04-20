@@ -15,7 +15,7 @@ search:
     enabled: true
 
 footer:
-    copyright: '© {{ now.year }} · Florian Chiorean'
+    copyright: '© 2026 · Florian Chiorean'
 
 links:
     - text: GitHub
@@ -27,5 +27,3 @@ links:
     - text: npm
       link: https://www.npmjs.com/org/merinaa
       icon: package
-
-favicon: favicon.ico
