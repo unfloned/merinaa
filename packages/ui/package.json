@@ -67,10 +67,10 @@
         "typecheck": "tsc --noEmit -p tsconfig.json"
     },
     "dependencies": {
-        "@hugeicons/core-free-icons": "^3.1.1",
+        "@hugeicons/core-free-icons": "^4.1.1",
         "@hugeicons/react": "^1.1.4",
         "clsx": "^2.1.1",
-        "lucide-react": "^0.460.0",
+        "lucide-react": "^1.11.0",
         "zustand": "^5.0.0"
     },
     "peerDependencies": {
