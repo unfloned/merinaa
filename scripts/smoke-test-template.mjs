@@ -98,7 +98,7 @@ pkg.pnpm = { ...(pkg.pnpm ?? {}), overrides: { ...(pkg.pnpm?.overrides ?? {}), .
 writeFileSync(pkgPath, JSON.stringify(pkg, null, 4));
 writeFileSync(
     join(projectDir, 'pnpm-workspace.yaml'),
-    `overrides:\n${Object.entries(overrides).map(([key, ref]) => `    '${key}': '${ref}'`).join('\n')}\n`,
+    `packages:\n    - .\noverrides:\n${Object.entries(overrides).map(([key, ref]) => `    '${key}': '${ref}'`).join('\n')}\n`,
 );
 
 // 5. pnpm install + generate + typecheck
