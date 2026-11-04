@@ -87,12 +87,12 @@ export function HUDOverlay() {
 
     return (
         <div className={clsx(
-            "fixed inset-0 pointer-events-none z-[100] transition-opacity duration-300",
+            "fixed inset-0 pointer-events-none z-100 transition-opacity duration-300",
             fadeIn ? "opacity-100" : "opacity-0"
         )}>
             {/* Vignette/Frame Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/40 via-transparent to-black/40" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/40" />
 
             {/* Corner Brackets */}
             <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-white/60" />
@@ -105,7 +105,7 @@ export function HUDOverlay() {
                 "absolute top-12 left-1/2 -translate-x-1/2 text-center transition-all duration-500",
                 fadeIn ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
             )}>
-                <div className="bg-black/60 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
+                <div className="bg-black/60 backdrop-blur-xs rounded-lg px-6 py-3 border border-white/20">
                     <p className="text-white/60 text-sm uppercase tracking-wider">Platzieren</p>
                     <p className="text-white text-lg font-semibold">{placingMode.itemLabel}</p>
                 </div>
@@ -134,7 +134,7 @@ export function HUDOverlay() {
                 "absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-500",
                 fadeIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}>
-                <div className="bg-black/70 backdrop-blur-sm rounded-xl px-8 py-4 border border-white/10">
+                <div className="bg-black/70 backdrop-blur-xs rounded-xl px-8 py-4 border border-white/10">
                     <div className="flex items-center gap-6">
                         {/* Left Click */}
                         <div className="flex items-center gap-3">

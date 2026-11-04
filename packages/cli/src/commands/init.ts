@@ -16,7 +16,7 @@ import { resolveTemplatesDir } from '../utils/paths';
  *  - scripts/build.js (runs generator → tsc → esbuild; supports --watch)
  *  - scripts/generate-module-registry.js (pre-build manifest → entry generator)
  *  - ui/ (tiny Vite entry that imports the generated registry)
- *  - vite.config.ts, tailwind.config.js, postcss.config.js
+ *  - vite.config.mts, postcss.config.mjs
  *  - resource/fxmanifest.lua, framework.config.yaml, vitest.config.ts
  *  - docker/ (MySQL + FiveM + Adminer compose stack)
  *  - .env.example, .gitignore

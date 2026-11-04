@@ -42,13 +42,13 @@ export default function HelloPage() {
                 <div className="mt-6 flex gap-3">
                     <button
                         onClick={onGreet}
-                        className="rounded bg-sky-500 px-4 py-2 text-sm font-medium hover:bg-sky-600"
+                        className="rounded-sm bg-sky-500 px-4 py-2 text-sm font-medium hover:bg-sky-600"
                     >
                         Greet via server
                     </button>
                     <button
                         onClick={() => setVisible(false)}
-                        className="rounded bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600"
+                        className="rounded-sm bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600"
                     >
                         Close
                     </button>

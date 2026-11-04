@@ -117,7 +117,7 @@ function NotificationItem({ notification, isPersistent: _isPersistent = false }:
         >
             <div className="flex items-start gap-3">
                 <Icon className={clsx(
-                    'w-5 h-5 flex-shrink-0 mt-0.5',
+                    'w-5 h-5 shrink-0 mt-0.5',
                     colors.icon,
                     isProgress && 'animate-spin'
                 )} />

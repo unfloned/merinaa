@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@source '../modules';
+@source '../node_modules/@merinaa/ui/src';
 
 /* Fullscreen transparent overlay — individual pages control their own layout. */
 html,

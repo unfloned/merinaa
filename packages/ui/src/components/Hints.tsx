@@ -44,7 +44,7 @@ function HintItem({ hint }: { hint: Hint }) {
 
                 {hint.keyBind && (
                     <kbd className={clsx(
-                        'px-2 py-0.5 rounded text-xs font-mono font-bold',
+                        'px-2 py-0.5 rounded-sm text-xs font-mono font-bold',
                         'bg-white/20 text-white border border-white/30'
                     )}>
                         {hint.keyBind}
