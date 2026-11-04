@@ -1,4 +1,4 @@
-import type { Reporter, TestModule, TestCase, TestRunEndReason } from 'vitest/node';
+import type { Reporter, TestModule, TestCase, TestRunEndReason } from 'vitest/node' with { 'resolution-mode': 'import' };
 import { frameworkConfigFromEnvOrFile } from './config-loader';
 
 /**
