@@ -3,10 +3,9 @@
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": ".",
-        "baseUrl": "..",
         "lib": ["ES2022"],
         "paths": {
-            "@modules/*": ["./modules/*"]
+            "@modules/*": ["./*"]
         },
         "skipLibCheck": true,
         "noEmitOnError": false,

@@ -50,8 +50,7 @@ my-server/
 │   └── styles.css
 ├── package.json
 ├── tsconfig.base.json
-├── vite.config.ts             @modules/* alias
-├── tailwind.config.js
+├── vite.config.mts            @modules/* alias
 └── vitest.config.ts
 ```
 

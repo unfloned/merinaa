@@ -246,7 +246,7 @@ export function SidePanel({
             style={{ width: `${currentWidth}px` }}
         >
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-black/70 to-transparent -left-32 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-l from-black/90 via-black/70 to-transparent -left-32 pointer-events-none" />
 
             {/* Resize Handle */}
             {resizable && (
@@ -272,7 +272,7 @@ export function SidePanel({
                 ) : (
                     <div className={clsx(
                         "p-4 border-b border-zinc-700 flex items-center justify-between",
-                        headerGradient ? `bg-gradient-to-r ${headerGradient}` : "bg-zinc-900"
+                        headerGradient ? `bg-linear-to-r ${headerGradient}` : "bg-zinc-900"
                     )}>
                         <div className="flex items-center gap-3">
                             <div className={clsx(
@@ -363,14 +363,14 @@ export function SidePanel({
                                                     : 'hover:bg-zinc-800 text-zinc-300'
                                             )}
                                         >
-                                            <TabIcon className="w-4 h-4 flex-shrink-0" />
+                                            <TabIcon className="w-4 h-4 shrink-0" />
                                             <span className="flex-1 text-left truncate">{tab.label}</span>
                                             {tab.indicator && (
-                                                <span className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" />
+                                                <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
                                             )}
                                             {tab.badge !== undefined && (
                                                 <span className={clsx(
-                                                    "px-1.5 py-0.5 text-xs rounded-full flex-shrink-0",
+                                                    "px-1.5 py-0.5 text-xs rounded-full shrink-0",
                                                     tab.badgeColor === 'red' && "bg-red-500 text-white",
                                                     tab.badgeColor === 'green' && "bg-green-500 text-white",
                                                     tab.badgeColor === 'blue' && "bg-blue-500 text-white",
@@ -407,7 +407,7 @@ export function SidePanel({
                     <div className="px-4 py-2 bg-zinc-950 border-t border-zinc-800 flex items-center justify-center gap-6 text-xs text-zinc-500">
                         {allKeyboardHints.map((hint, i) => (
                             <span key={i}>
-                                <kbd className="px-1.5 py-0.5 bg-zinc-800 rounded">{hint.key}</kbd> {hint.label}
+                                <kbd className="px-1.5 py-0.5 bg-zinc-800 rounded-sm">{hint.key}</kbd> {hint.label}
                             </span>
                         ))}
                     </div>

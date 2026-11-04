@@ -65,14 +65,14 @@
         "db:migrate:create": "ts-node src/database/cli/create-migration.ts"
     },
     "dependencies": {
+        "@deepkit/injector": "^1.1.0",
+        "@deepkit/mysql": "^1.1.0",
+        "@deepkit/orm": "^1.1.0",
+        "@deepkit/postgres": "^1.1.0",
+        "@deepkit/sql": "^1.1.0",
+        "@deepkit/type": "^1.1.0",
         "@merinaa/core": "workspace:*",
-        "@deepkit/type": "^1.0.19",
-        "@deepkit/orm": "^1.0.19",
-        "@deepkit/sql": "^1.0.19",
-        "@deepkit/mysql": "^1.0.19",
-        "@deepkit/postgres": "^1.0.19",
-        "@deepkit/injector": "^1.0.19",
-        "yaml": "^2.9.0"
+        "yaml": "^2.9.1"
     },
     "peerDependencies": {
         "@citizenfx/server": "*",
@@ -88,10 +88,10 @@
     },
     "devDependencies": {
         "@citizenfx/server": "latest",
-        "@types/node": "^22.0.0",
+        "@types/node": "^22.20.5",
         "reflect-metadata": "^0.2.2",
         "ts-node": "^10.9.2",
-        "typescript": "^5.7.0"
+        "typescript": "^6.0.3"
     },
     "publishConfig": {
         "access": "public"

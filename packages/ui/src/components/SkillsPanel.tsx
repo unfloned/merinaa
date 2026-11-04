@@ -128,13 +128,13 @@ export function SkillsPanel({ skills, onClose }: SkillsPanelProps) {
     const totalBerufPoints = berufSkills.reduce((sum, s) => sum + s.level, 0);
 
     return (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[75]">
-            <div className="bg-[#0d1a2d] rounded-xl w-[800px] max-h-[85vh] overflow-hidden shadow-2xl border border-[#3b82f6]/50">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-75">
+            <div className="bg-[#0d1a2d] rounded-xl w-[800px] max-h-[85vh] overflow-hidden shadow-2xl border border-primary-500/50">
                 {/* Header */}
-                <div className="flex items-center justify-between px-6 py-4 border-b border-[#1e3a5f] bg-gradient-to-r from-[#1e3a5f]/50 to-[#0d1a2d]">
+                <div className="flex items-center justify-between px-6 py-4 border-b border-[#1e3a5f] bg-linear-to-r from-[#1e3a5f]/50 to-[#0d1a2d]">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/30 flex items-center justify-center">
-                            <TrendingUp className="w-6 h-6 text-[#60a5fa]" />
+                        <div className="w-10 h-10 rounded-lg bg-primary-500/30 flex items-center justify-center">
+                            <TrendingUp className="w-6 h-6 text-primary-400" />
                         </div>
                         <div>
                             <h2 className="text-xl font-bold text-white">Fähigkeiten</h2>
@@ -235,7 +235,7 @@ function SkillCategory({ category, skills, poolUsed, poolMax }: SkillCategoryPro
             {poolMax && (
                 <div className="mb-4 bg-[#162a42] rounded-full h-2 overflow-hidden">
                     <div
-                        className={clsx("h-full bg-gradient-to-r transition-all", config.barColor)}
+                        className={clsx("h-full bg-linear-to-r transition-all", config.barColor)}
                         style={{ width: `${Math.min(100, (poolUsed || 0) / poolMax * 100)}%` }}
                     />
                 </div>
@@ -275,7 +275,7 @@ function SkillCard({ skill, categoryConfig }: SkillCardProps) {
         <div className="bg-[#12243a] rounded-lg p-3 border border-[#1e3a5f] hover:border-[#2a4a6a] transition-all">
             <div className="flex items-start gap-3">
                 {/* Icon */}
-                <div className={clsx("w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0", categoryConfig.bgColor)}>
+                <div className={clsx("w-10 h-10 rounded-lg flex items-center justify-center shrink-0", categoryConfig.bgColor)}>
                     <Icon className={clsx("w-5 h-5", categoryConfig.color)} />
                 </div>
 
@@ -293,7 +293,7 @@ function SkillCard({ skill, categoryConfig }: SkillCardProps) {
                         <span className="text-lg font-bold text-white">{skill.level}</span>
                         <span className="text-slate-500 text-xs">/ 100</span>
                         {skill.organizationBonus > 0 && (
-                            <span className="text-[10px] text-green-400 bg-green-900/30 px-1 py-0.5 rounded">
+                            <span className="text-[10px] text-green-400 bg-green-900/30 px-1 py-0.5 rounded-sm">
                                 +{skill.organizationBonus}
                             </span>
                         )}
@@ -302,7 +302,7 @@ function SkillCard({ skill, categoryConfig }: SkillCardProps) {
                     {/* Progress bar */}
                     <div className="bg-[#0a1420] rounded-full h-1.5 overflow-hidden mb-1">
                         <div
-                            className={clsx("h-full bg-gradient-to-r transition-all", categoryConfig.barColor)}
+                            className={clsx("h-full bg-linear-to-r transition-all", categoryConfig.barColor)}
                             style={{ width: `${skill.progressPercent}%` }}
                         />
                     </div>

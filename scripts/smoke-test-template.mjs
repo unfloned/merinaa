@@ -96,6 +96,10 @@ for (const name of packages) {
 }
 pkg.pnpm = { ...(pkg.pnpm ?? {}), overrides: { ...(pkg.pnpm?.overrides ?? {}), ...overrides } };
 writeFileSync(pkgPath, JSON.stringify(pkg, null, 4));
+writeFileSync(
+    join(projectDir, 'pnpm-workspace.yaml'),
+    `packages:\n    - .\noverrides:\n${Object.entries(overrides).map(([key, ref]) => `    '${key}': '${ref}'`).join('\n')}\n`,
+);
 
 // 5. pnpm install + generate + typecheck
 console.log(`\nProject scaffolded at ${projectDir}\n`);
@@ -103,6 +107,8 @@ run('pnpm install --ignore-scripts', { cwd: projectDir });
 run('npx deepkit-type-install', { cwd: projectDir });
 run('node scripts/generate-module-registry.js', { cwd: projectDir });
 run('npx tsc -p modules/tsconfig.json --noEmit', { cwd: projectDir });
+run('pnpm run build', { cwd: projectDir });
+run('pnpm run build:ui', { cwd: projectDir });
 
 console.log('\nSmoke test passed ✓');
 

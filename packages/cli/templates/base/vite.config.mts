@@ -15,16 +15,16 @@ export default defineConfig({
     base: './',
     plugins: [react()],
     build: {
-        outDir: resolve(__dirname, 'resource/ui'),
+        outDir: resolve(import.meta.dirname, 'resource/ui'),
         emptyOutDir: true,
         assetsDir: 'assets',
         rollupOptions: {
-            input: resolve(__dirname, 'ui/index.html'),
+            input: resolve(import.meta.dirname, 'ui/index.html'),
         },
     },
     resolve: {
         alias: {
-            '@modules': resolve(__dirname, 'modules'),
+            '@modules': resolve(import.meta.dirname, 'modules'),
         },
     },
 });
