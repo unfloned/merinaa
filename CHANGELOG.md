@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] — 2026-11-04
+
+Toolchain update. Consumers need TypeScript 6 and Tailwind 4.
+
+### Changed
+
+- Deepkit 1.1.0 across `@merinaa/server` and the template
+- TypeScript 6 with ts-patch 4; `module` / `moduleResolution` now `node16`, `baseUrl` dropped
+- `@merinaa/ui` classes use Tailwind 4 names; consumers scan it via `@source` instead of `content`
+- Vitest 5, Vite 8, React 19 (peer range still allows React 18), ESLint 10, esbuild 0.28
+- Template: `vite.config.mts` and `postcss.config.mjs`, Tailwind 4 via `@tailwindcss/postcss`
+
+### Fixed
+
+- Smoke test now builds the scaffolded project including the UI and works with pnpm 11+
+
 ## [0.3.0] — 2026-04-19
 
 Major architectural shift: the whole consumer surface collapses into two
