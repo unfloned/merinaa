@@ -1,6 +1,6 @@
 {
     "name": "@merinaa/server",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Server-side framework with DI, Deepkit ORM, events, RPC and YAML config for FiveM",
     "author": "Florian Chiorean",
     "license": "MIT",
