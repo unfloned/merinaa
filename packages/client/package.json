@@ -1,6 +1,6 @@
 {
     "name": "@merinaa/client",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Client-side framework for FiveM with decorator-based controllers and NUI bridge",
     "author": "Florian Chiorean",
     "license": "MIT",
