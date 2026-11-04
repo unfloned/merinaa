@@ -30,7 +30,7 @@
     "devDependencies": {
         "@citizenfx/server": "latest",
         "@citizenfx/client": "latest",
-        "@deepkit/type-compiler": "^1.0.19",
+        "@deepkit/type-compiler": "^1.1.0",
         "@types/node": "^22.0.0",
         "@types/react": "^18.3.0",
         "@types/react-dom": "^18.3.0",
