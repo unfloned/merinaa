@@ -1,3 +1,4 @@
+import { handleNui } from '../events/nui-handlers';
 import type { PageOptions } from '@merinaa/core';
 
 /**
@@ -175,8 +176,7 @@ function ensureCloseCallback(): void {
     if (closeCallbackInstalled) return;
     closeCallbackInstalled = true;
 
-    RegisterNuiCallbackType('merinaa');
-    on('__cfx_nui:merinaa', (data: any, cb: (resp: any) => void) => {
+    handleNui('merinaa', (data: any, cb: (resp: any) => void) => {
         try {
             if (data?.action === 'close-page') hidePage();
             cb({ ok: true });

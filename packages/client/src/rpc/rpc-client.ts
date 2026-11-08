@@ -1,3 +1,4 @@
+import { listen } from '../events/listeners';
 import {
     RpcRequest,
     RpcResponse,
@@ -50,7 +51,7 @@ export class RpcClient {
         if (this.initialized) return;
 
         // Listen for RPC responses from server
-        onNet('framework:rpc:response', (response: RpcResponse) => {
+        listen('net', 'framework:rpc:response', (response: RpcResponse) => {
             this.handleResponse(response);
         });
 

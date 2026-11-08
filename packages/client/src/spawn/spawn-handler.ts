@@ -1,3 +1,5 @@
+import { listen } from '../events/listeners';
+
 /**
  * Simple spawn handler for development
  * Handles the character:spawn event from server
@@ -197,11 +199,15 @@ async function processPendingSpawn(): Promise<void> {
 /**
  * Initialize spawn handler
  */
+let spawnHandlerStarted = false;
+
 export function initSpawnHandler(): void {
+    if (spawnHandlerStarted) return;
+    spawnHandlerStarted = true;
     console.log('[Spawn] Initializing spawn handler...');
 
     // Listen for spawn event from server
-    onNet('character:spawn', async (data: SpawnData) => {
+    listen('net', 'character:spawn', async (data: SpawnData) => {
         console.log('[Spawn] Received spawn event:', JSON.stringify(data));
 
         if (isClientReady) {
