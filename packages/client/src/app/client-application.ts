@@ -1,7 +1,8 @@
 import 'reflect-metadata';
 import { METADATA_KEYS, EventType } from '@merinaa/core';
 import type { Type, EventHandler } from '@merinaa/core';
-import { NuiBridge } from '../nui/nui-bridge';
+import { getNuiBridge, type NuiBridge } from '../nui/nui-bridge';
+import { listen } from '../events/listeners';
 
 /**
  * Client-side application
@@ -10,12 +11,13 @@ export class ClientApplication {
     private static instance: ClientApplication;
     private isStarted = false;
     private controllers: any[] = [];
+    private registered = new Set<Type<any>>();
     private tickHandlers: Map<string, number> = new Map();
 
     private nuiBridge: NuiBridge;
 
     private constructor() {
-        this.nuiBridge = new NuiBridge();
+        this.nuiBridge = getNuiBridge();
     }
 
     /**
@@ -32,6 +34,9 @@ export class ClientApplication {
      * Register a controller
      */
     registerController(controllerClass: Type<any>): void {
+        if (this.registered.has(controllerClass)) return;
+        this.registered.add(controllerClass);
+
         const instance = new controllerClass();
         this.controllers.push(instance);
 
@@ -64,14 +69,10 @@ export class ClientApplication {
 
         switch (handler.type) {
             case EventType.SERVER:
-                onNet(handler.event, (...args: any[]) => {
-                    method(...args);
-                });
+                listen('net', handler.event, method);
                 break;
             case EventType.INTERNAL:
-                on(handler.event, (...args: any[]) => {
-                    method(...args);
-                });
+                listen('local', handler.event, method);
                 break;
         }
     }
@@ -130,8 +131,8 @@ export class ClientApplication {
     /**
      * Listen for server events
      */
-    onServer(event: string, handler: EventHandler): void {
-        onNet(event, handler);
+    onServer(event: string, handler: EventHandler): () => void {
+        return listen('net', event, handler);
     }
 }
 

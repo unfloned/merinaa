@@ -1,3 +1,4 @@
+import { listen } from '../events/listeners';
 import type { Vector3, Vector4, PlayerData } from '@merinaa/core';
 
 /**
@@ -9,12 +10,12 @@ export class LocalPlayerService {
 
     private constructor() {
         // Listen for player data updates
-        onNet('framework:player:data', (data: PlayerData) => {
+        listen('net', 'framework:player:data', (data: PlayerData) => {
             this.playerData = data;
             emit('framework:player:updated', data);
         });
 
-        onNet('framework:player:update', (key: string, value: any) => {
+        listen('net', 'framework:player:update', (key: string, value: any) => {
             if (this.playerData) {
                 this.setNestedValue(this.playerData, key, value);
                 emit('framework:player:updated', this.playerData);

@@ -1,3 +1,4 @@
+import { listen } from '../events/listeners';
 import { getNuiBridge } from '../nui/nui-bridge';
 
 export type NotificationType = 'success' | 'error' | 'info' | 'warning' | 'progress';
@@ -20,20 +21,20 @@ export class NotificationService {
 
     private constructor() {
         // Listen for server notifications (multiple event names for compatibility)
-        onNet('framework:notify', (options: NotificationOptions) => {
+        listen('net', 'framework:notify', (options: NotificationOptions) => {
             this.show(options);
         });
 
-        onNet('notify:show', (options: NotificationOptions) => {
+        listen('net', 'notify:show', (options: NotificationOptions) => {
             this.show(options);
         });
 
-        onNet('notify:client', (options: NotificationOptions) => {
+        listen('net', 'notify:client', (options: NotificationOptions) => {
             this.show(options);
         });
 
         // Listen for local client notifications (emit from other client scripts)
-        on('notification:show', (options: NotificationOptions | string, message?: string) => {
+        listen('local', 'notification:show', (options: NotificationOptions | string, message?: string) => {
             // Support both formats: object or (type, message)
             if (typeof options === 'string') {
                 this.show({ type: options as NotificationType, message: message || '' });

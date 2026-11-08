@@ -27,6 +27,7 @@ getNotificationService();
 export * from './utils/natives';
 export * from './utils/streaming';
 export { onNui, onNuiBatch } from './utils/nui-callbacks';
+export { listen, listenerCount } from './events/listeners';
 
 // RPC
 export * from './rpc';

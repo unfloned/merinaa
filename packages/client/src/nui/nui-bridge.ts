@@ -1,3 +1,5 @@
+import { handleNui } from '../events/nui-handlers';
+
 /**
  * Bridge between client scripts and NUI (React)
  */
@@ -14,9 +16,7 @@ export class NuiBridge {
      * Setup NUI callback handlers
      */
     private setupCallbacks(): void {
-        RegisterNuiCallbackType('framework');
-
-        on('__cfx_nui:framework', (data: any, cb: (response: any) => void) => {
+        handleNui('framework', (data: any, cb: (response: any) => void) => {
             const { action, payload } = data;
 
             const handler = this.callbacks.get(action);

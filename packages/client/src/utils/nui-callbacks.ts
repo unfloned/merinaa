@@ -1,3 +1,5 @@
+import { handleNui } from '../events/nui-handlers';
+
 /**
  * NUI Callback Helpers (functional, non-decorator)
  *
@@ -13,8 +15,7 @@
  * Register a single NUI callback
  */
 export function onNui(name: string, handler: (data: any) => any): void {
-    RegisterNuiCallbackType(name);
-    on(`__cfx_nui:${name}`, async (data: any, cb: Function) => {
+    handleNui(name, async (data: any, cb: (response: any) => void) => {
         try {
             const result = await handler(data);
             cb(result ?? {});
