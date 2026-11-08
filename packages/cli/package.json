@@ -1,6 +1,6 @@
 {
     "name": "@merinaa/cli",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "CLI scaffolding for Merinaa — init new FiveM projects and generate modules",
     "author": "Florian Chiorean",
     "license": "MIT",

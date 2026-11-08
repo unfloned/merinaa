@@ -19,10 +19,10 @@
         "docker:restart": "docker compose -f docker/docker-compose.yml restart fivem"
     },
     "dependencies": {
-        "@merinaa/core": "^0.4.1",
-        "@merinaa/server": "^0.4.1",
-        "@merinaa/client": "^0.4.1",
-        "@merinaa/ui": "^0.4.1",
+        "@merinaa/core": "^0.4.2",
+        "@merinaa/server": "^0.4.2",
+        "@merinaa/client": "^0.4.2",
+        "@merinaa/ui": "^0.4.2",
         "react": "^19.3.1",
         "react-dom": "^19.3.1",
         "reflect-metadata": "^0.2.2"

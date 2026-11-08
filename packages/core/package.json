@@ -1,6 +1,6 @@
 {
     "name": "@merinaa/core",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "Core types, decorators and interfaces for the Merinaa FiveM framework",
     "author": "Florian Chiorean",
     "license": "MIT",
