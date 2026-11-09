@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@citizenfx/client':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38386-1
       '@citizenfx/server':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38386-1
       '@deepkit/type-compiler':
         specifier: ^1.1.0
         version: 1.1.0(typescript@6.0.3)
@@ -75,7 +75,7 @@ importers:
     devDependencies:
       '@citizenfx/client':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38386-1
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -124,7 +124,7 @@ importers:
     devDependencies:
       '@citizenfx/server':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38386-1
       '@types/node':
         specifier: ^22.20.5
         version: 22.20.5
@@ -150,8 +150,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^1.67.0
-        version: 1.67.0(@types/react@19.3.0)(react@19.3.1)
+        specifier: ^1.70.0
+        version: 1.70.0(@types/react@19.3.0)(react@19.3.1)
       zustand:
         specifier: ^5.0.16
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)
@@ -199,11 +199,11 @@ packages:
   '@cacheable/utils@2.5.0':
     resolution: {integrity: sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==}
 
-  '@citizenfx/client@2.0.38220-1':
-    resolution: {integrity: sha512-p7dBdXOw+gFRJRNsX3MU1n1T/8gSjra0On8GvqC4tGDXl4P+YSBPYsH2mB6UYFY6Tw1zu/4vpY9z8g2aX0tN1w==}
+  '@citizenfx/client@2.0.38386-1':
+    resolution: {integrity: sha512-vvPo1X1Zex1+jkJ9NSGEwYf/2nn7a0QIg27DAvxAkKULq7RMdGiytDKw7nrsl7QtxdeN6xli52wbXJxaCNdb2Q==}
 
-  '@citizenfx/server@2.0.38220-1':
-    resolution: {integrity: sha512-TyTs16N09+7CWmYJ5fqERxMQFS0v7k1tDYdzkXK1k+BB3Zr2kXsWAD7ylgxEqVGYqQyt44+Rmk9N5n4FqYYFpw==}
+  '@citizenfx/server@2.0.38386-1':
+    resolution: {integrity: sha512-t5IMOIUhejL8ueoC2hOaVKZXabWCmKHVj2BKxwq8edpmYDq3clfxrFS30eyxGMeyd4HHoGl+g3Egi6ssCuUJcA==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1241,8 +1241,8 @@ packages:
     resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
     engines: {node: 20 || >=22}
 
-  lucide-react@1.67.0:
-    resolution: {integrity: sha512-z7kd21YNm/Gw3E7mTnq5dTuvV+yc+OEwA//oDENSG1SbZ/NVgKdjxALJFNdGoC0Ji7HaJR2Dha9ev7VUPxy9CQ==}
+  lucide-react@1.70.0:
+    resolution: {integrity: sha512-gCTPPN1MlQUBtUgdsUv+0CAUj+X8hifRUiRBw4E5v7lvDIOIpx0EZezdGQMSimS8pKA6esvullJub4GYr0mCHA==}
     peerDependencies:
       '@types/react': '*'
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -1696,9 +1696,9 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
-  '@citizenfx/client@2.0.38220-1': {}
+  '@citizenfx/client@2.0.38386-1': {}
 
-  '@citizenfx/server@2.0.38220-1': {}
+  '@citizenfx/server@2.0.38386-1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2535,7 +2535,7 @@ snapshots:
 
   lru-cache@11.5.3: {}
 
-  lucide-react@1.67.0(@types/react@19.3.0)(react@19.3.1):
+  lucide-react@1.70.0(@types/react@19.3.0)(react@19.3.1):
     dependencies:
       react: 19.3.1
     optionalDependencies:
