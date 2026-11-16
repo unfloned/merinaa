@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@citizenfx/client':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38621-1
       '@citizenfx/server':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38621-1
       '@deepkit/type-compiler':
         specifier: ^1.1.0
         version: 1.1.0(typescript@6.0.3)
@@ -75,7 +75,7 @@ importers:
     devDependencies:
       '@citizenfx/client':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38621-1
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -124,7 +124,7 @@ importers:
     devDependencies:
       '@citizenfx/server':
         specifier: latest
-        version: 2.0.38220-1
+        version: 2.0.38621-1
       '@types/node':
         specifier: ^22.20.5
         version: 22.20.5
@@ -150,11 +150,11 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^1.67.0
-        version: 1.67.0(@types/react@19.3.0)(react@19.3.1)
+        specifier: ^1.72.0
+        version: 1.72.0(@types/react@19.3.0)(react@19.3.1)
       zustand:
-        specifier: ^5.0.16
-        version: 5.0.16(@types/react@19.3.0)(react@19.3.1)
+        specifier: ^5.1.0
+        version: 5.1.0(@types/react@19.3.0)(react@19.3.1)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.3.4
@@ -199,11 +199,11 @@ packages:
   '@cacheable/utils@2.5.0':
     resolution: {integrity: sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==}
 
-  '@citizenfx/client@2.0.38220-1':
-    resolution: {integrity: sha512-p7dBdXOw+gFRJRNsX3MU1n1T/8gSjra0On8GvqC4tGDXl4P+YSBPYsH2mB6UYFY6Tw1zu/4vpY9z8g2aX0tN1w==}
+  '@citizenfx/client@2.0.38621-1':
+    resolution: {integrity: sha512-aneJlHWdNA+Y3XD6d+kLyGl4zp21LBHq6p9WaK5JUqZJzDk7USW4DTgADGswsm1pwp3aeD5frDesx1I3ROvdjw==}
 
-  '@citizenfx/server@2.0.38220-1':
-    resolution: {integrity: sha512-TyTs16N09+7CWmYJ5fqERxMQFS0v7k1tDYdzkXK1k+BB3Zr2kXsWAD7ylgxEqVGYqQyt44+Rmk9N5n4FqYYFpw==}
+  '@citizenfx/server@2.0.38621-1':
+    resolution: {integrity: sha512-XtPcr6k85Lz1DS2pljboYGiobAcRkuL6WYEhfkwMwi7nf5YxHxzjtWtxPWLGuTrXAu4fNxYFFJ6jxmZlFHOipg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1241,8 +1241,8 @@ packages:
     resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
     engines: {node: 20 || >=22}
 
-  lucide-react@1.67.0:
-    resolution: {integrity: sha512-z7kd21YNm/Gw3E7mTnq5dTuvV+yc+OEwA//oDENSG1SbZ/NVgKdjxALJFNdGoC0Ji7HaJR2Dha9ev7VUPxy9CQ==}
+  lucide-react@1.72.0:
+    resolution: {integrity: sha512-fbF5i1GU8GODETa3Q7rXqrJrcx3iPYrQtxthom103zGx+Z0BGwKYAW9s+9435ohYJ7hQm0av0PoZcqI1CRwNrg==}
     peerDependencies:
       '@types/react': '*'
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -1662,8 +1662,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zustand@5.0.16:
-    resolution: {integrity: sha512-Uv7e327ihlCfayfja3hDc0M64Upev1LWBKpRobdK4NyovDDPeeX4imWXc/wzC1yc6fkYPoAY/ncKVPAs2jrtQw==}
+  zustand@5.1.0:
+    resolution: {integrity: sha512-ciJZlP48M1PTQbVQq81CGVFxHTLpZNrFjKqwjtCU34AWuXTZT/jrF3p9+fI84Cf1eSCMLapxqBy/SNTfwOBuqA==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=18.0.0'
@@ -1696,9 +1696,9 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
-  '@citizenfx/client@2.0.38220-1': {}
+  '@citizenfx/client@2.0.38621-1': {}
 
-  '@citizenfx/server@2.0.38220-1': {}
+  '@citizenfx/server@2.0.38621-1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2535,7 +2535,7 @@ snapshots:
 
   lru-cache@11.5.3: {}
 
-  lucide-react@1.67.0(@types/react@19.3.0)(react@19.3.1):
+  lucide-react@1.72.0(@types/react@19.3.0)(react@19.3.1):
     dependencies:
       react: 19.3.1
     optionalDependencies:
@@ -2865,7 +2865,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zustand@5.0.16(@types/react@19.3.0)(react@19.3.1):
+  zustand@5.1.0(@types/react@19.3.0)(react@19.3.1):
     optionalDependencies:
       '@types/react': 19.3.0
       react: 19.3.1
